@@ -3,7 +3,7 @@ package data
 import (
 	"math/rand"
 
-	"github.com/kywelch17/mock-market-intelligence/internal/market"
+	"github.com/kywelch17/mock-market-intelligence/internal/models"
 )
 
 var mlsEvents = []market.Event{
