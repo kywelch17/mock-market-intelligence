@@ -1,4 +1,4 @@
-package market
+package models
 
 type Outcome struct {
 	ID          string

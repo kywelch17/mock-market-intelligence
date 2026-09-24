@@ -1,4 +1,4 @@
-package market
+package models
 
 type Player struct {
 	ID       string

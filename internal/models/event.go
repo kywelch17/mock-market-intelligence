@@ -1,4 +1,4 @@
-package market
+package models
 
 const (
 	LeagueMLB = "MLB"

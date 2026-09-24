@@ -1,27 +1,26 @@
 package data
 
 import (
-	"math/rand"
-
 	"github.com/kywelch17/mock-market-intelligence/internal/models"
+	"math/rand"
 )
 
-var nflEvents = []market.Event{
+var nflEvents = []models.Event{
 	{
 		ID:          "nfl-bills-patriots",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Buffalo Bills @ New England Patriots",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-bills-patriots-ml",
 				EventID:     "nfl-bills-patriots",
 				Description: "Bills vs Patriots Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-bills-win",
 						Description: "BUF",
@@ -38,11 +37,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-bills-patriots-spread",
 				EventID:     "nfl-bills-patriots",
 				Description: "Bills -3.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-bills-minus-3-5",
 						Description: "Bills -3.5",
@@ -59,11 +58,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-bills-patriots-total",
 				EventID:     "nfl-bills-patriots",
 				Description: "Total Points 48.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-48-5",
 						Description: "Over 48.5",
@@ -80,10 +79,10 @@ var nflEvents = []market.Event{
 				ID:          "nfl-dalton-kincaid-recieving-yards",
 				EventID:     "nfl-bills-patroits",
 				Description: "Dalton Kincaid 45.5 Recieving Yards",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "dalton-kincaid",
 					Name:     "Dalton Kincaid",
 					Number:   "86",
@@ -96,18 +95,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-chiefs-raiders",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Kansas City Chiefs @ Las Vegas Raiders",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-chiefs-raiders-ml",
 				EventID:     "nfl-chiefs-raiders",
 				Description: "Chiefs vs Raiders Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-chiefs-win",
 						Description: "KC",
@@ -124,11 +123,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-chiefs-raiders-spread",
 				EventID:     "nfl-chiefs-raiders",
 				Description: "Chiefs -7.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-chiefs-minus-7-5",
 						Description: "Chiefs -7.5",
@@ -145,11 +144,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-chiefs-raiders-total",
 				EventID:     "nfl-chiefs-raiders",
 				Description: "Total Points 52.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-52-5",
 						Description: "Over 52.5",
@@ -166,17 +165,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-patrick-mahomes-pass-tds",
 				EventID:     "nfl-chiefs-raiders",
 				Description: "Patrick Mahomes 2.5 Passing TDs",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "patrick-mahomes",
 					Name:     "Patrick Mahomes",
 					Number:   "15",
 					Position: "QB",
 					Team:     "KC",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-patrick-mahomes-over-2-5-tds",
 						Description: "Over 2.5",
@@ -194,18 +193,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-eagles-cowboys",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Philadelphia Eagles @ Dallas Cowboys",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-eagles-cowboys-ml",
 				EventID:     "nfl-eagles-cowboys",
 				Description: "Eagles vs Cowboys Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-eagles-win",
 						Description: "PHI",
@@ -222,11 +221,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-eagles-cowboys-spread",
 				EventID:     "nfl-eagles-cowboys",
 				Description: "Eagles -4.0",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-eagles-minus-4-0",
 						Description: "Eagles -4.0",
@@ -243,11 +242,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-eagles-cowboys-total",
 				EventID:     "nfl-eagles-cowboys",
 				Description: "Total Points 51.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-51-5",
 						Description: "Over 51.5",
@@ -264,17 +263,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-jalen-hurts-rush-yards",
 				EventID:     "nfl-eagles-cowboys",
 				Description: "Jalen Hurts 65.5 Rushing Yards",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "jalen-hurts",
 					Name:     "Jalen Hurts",
 					Number:   "2",
 					Position: "QB",
 					Team:     "PHI",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-jalen-hurts-over-65-5-yards",
 						Description: "Over 65.5",
@@ -292,18 +291,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-49ers-seahawks",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "San Francisco 49ers @ Seattle Seahawks",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-49ers-seahawks-ml",
 				EventID:     "nfl-49ers-seahawks",
 				Description: "49ers vs Seahawks Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-49ers-win",
 						Description: "SF",
@@ -320,11 +319,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-49ers-seahawks-spread",
 				EventID:     "nfl-49ers-seahawks",
 				Description: "49ers -3.0",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-49ers-minus-3-0",
 						Description: "49ers -3.0",
@@ -341,11 +340,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-49ers-seahawks-total",
 				EventID:     "nfl-49ers-seahawks",
 				Description: "Total Points 44.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-44-5",
 						Description: "Over 44.5",
@@ -362,17 +361,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-christian-mccaffrey-rec-yards",
 				EventID:     "nfl-49ers-seahawks",
 				Description: "Christian McCaffrey 85.5 Receiving Yards",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "christian-mccaffrey",
 					Name:     "Christian McCaffrey",
 					Number:   "23",
 					Position: "RB",
 					Team:     "SF",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-christian-mccaffrey-over-85-5-yards",
 						Description: "Over 85.5",
@@ -390,18 +389,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-packers-lions",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Green Bay Packers @ Detroit Lions",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-packers-lions-ml",
 				EventID:     "nfl-packers-lions",
 				Description: "Packers vs Lions Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-packers-win",
 						Description: "GB",
@@ -418,11 +417,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-packers-lions-spread",
 				EventID:     "nfl-packers-lions",
 				Description: "Packers -6.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-packers-minus-6-5",
 						Description: "Packers -6.5",
@@ -439,11 +438,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-packers-lions-total",
 				EventID:     "nfl-packers-lions",
 				Description: "Total Points 47.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-47-5",
 						Description: "Over 47.5",
@@ -460,17 +459,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-aaron-rodgers-pass-yards",
 				EventID:     "nfl-packers-lions",
 				Description: "Aaron Rodgers 265.5 Passing Yards",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "aaron-rodgers",
 					Name:     "Aaron Rodgers",
 					Number:   "12",
 					Position: "QB",
 					Team:     "GB",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-aaron-rodgers-over-265-5-yards",
 						Description: "Over 265.5",
@@ -488,18 +487,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-bengals-browns",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Cincinnati Bengals @ Cleveland Browns",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-bengals-browns-ml",
 				EventID:     "nfl-bengals-browns",
 				Description: "Bengals vs Browns Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-bengals-win",
 						Description: "CIN",
@@ -516,11 +515,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-bengals-browns-spread",
 				EventID:     "nfl-bengals-browns",
 				Description: "Bengals -2.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-bengals-minus-2-5",
 						Description: "Bengals -2.5",
@@ -537,11 +536,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-bengals-browns-total",
 				EventID:     "nfl-bengals-browns",
 				Description: "Total Points 43.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-43-5",
 						Description: "Over 43.5",
@@ -558,17 +557,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-joe-burro-pass-tds",
 				EventID:     "nfl-bengals-browns",
 				Description: "Joe Burrow 2.0 Passing TDs",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "joe-burro",
 					Name:     "Joe Burrow",
 					Number:   "9",
 					Position: "QB",
 					Team:     "CIN",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-joe-burro-over-2-0-tds",
 						Description: "Over 2.0",
@@ -586,18 +585,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-vikings-bears",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Minnesota Vikings @ Chicago Bears",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-vikings-bears-ml",
 				EventID:     "nfl-vikings-bears",
 				Description: "Vikings vs Bears Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-vikings-win",
 						Description: "MIN",
@@ -614,11 +613,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-vikings-bears-spread",
 				EventID:     "nfl-vikings-bears",
 				Description: "Vikings -4.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-vikings-minus-4-5",
 						Description: "Vikings -4.5",
@@ -635,11 +634,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-vikings-bears-total",
 				EventID:     "nfl-vikings-bears",
 				Description: "Total Points 41.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-41-5",
 						Description: "Over 41.5",
@@ -656,17 +655,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-justin-jefferson-rec-yards",
 				EventID:     "nfl-vikings-bears",
 				Description: "Justin Jefferson 95.5 Receiving Yards",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "justin-jefferson",
 					Name:     "Justin Jefferson",
 					Number:   "18",
 					Position: "WR",
 					Team:     "MIN",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-justin-jefferson-over-95-5-yards",
 						Description: "Over 95.5",
@@ -684,18 +683,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-rams-cardinals",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Los Angeles Rams @ Arizona Cardinals",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-rams-cardinals-ml",
 				EventID:     "nfl-rams-cardinals",
 				Description: "Rams vs Cardinals Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-rams-win",
 						Description: "LAR",
@@ -712,11 +711,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-rams-cardinals-spread",
 				EventID:     "nfl-rams-cardinals",
 				Description: "Rams -5.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-rams-minus-5-5",
 						Description: "Rams -5.5",
@@ -733,11 +732,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-rams-cardinals-total",
 				EventID:     "nfl-rams-cardinals",
 				Description: "Total Points 46.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-46-5",
 						Description: "Over 46.5",
@@ -754,17 +753,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-matthew-stafford-pass-tds",
 				EventID:     "nfl-rams-cardinals",
 				Description: "Matthew Stafford 2.5 Passing TDs",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "matthew-stafford",
 					Name:     "Matthew Stafford",
 					Number:   "9",
 					Position: "QB",
 					Team:     "LAR",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-matthew-stafford-over-2-5-tds",
 						Description: "Over 2.5",
@@ -782,18 +781,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-saints-falcons",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "New Orleans Saints @ Atlanta Falcons",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-saints-falcons-ml",
 				EventID:     "nfl-saints-falcons",
 				Description: "Saints vs Falcons Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-saints-win",
 						Description: "NO",
@@ -810,11 +809,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-saints-falcons-spread",
 				EventID:     "nfl-saints-falcons",
 				Description: "Saints -3.0",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-saints-minus-3-0",
 						Description: "Saints -3.0",
@@ -831,11 +830,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-saints-falcons-total",
 				EventID:     "nfl-saints-falcons",
 				Description: "Total Points 45.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-45-5",
 						Description: "Over 45.5",
@@ -852,17 +851,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-derek-carr-pass-yards",
 				EventID:     "nfl-saints-falcons",
 				Description: "Derek Carr 225.5 Passing Yards",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "derek-carr",
 					Name:     "Derek Carr",
 					Number:   "4",
 					Position: "QB",
 					Team:     "NO",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-derek-carr-over-225-5-yards",
 						Description: "Over 225.5",
@@ -880,18 +879,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-broncos-chargers",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Denver Broncos @ Los Angeles Chargers",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-broncos-chargers-ml",
 				EventID:     "nfl-broncos-chargers",
 				Description: "Broncos vs Chargers Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-broncos-win",
 						Description: "DEN",
@@ -908,11 +907,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-broncos-chargers-spread",
 				EventID:     "nfl-broncos-chargers",
 				Description: "Broncos -1.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-broncos-minus-1-5",
 						Description: "Broncos -1.5",
@@ -929,11 +928,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-broncos-chargers-total",
 				EventID:     "nfl-broncos-chargers",
 				Description: "Total Points 42.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-42-5",
 						Description: "Over 42.5",
@@ -950,17 +949,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-russell-wilson-pass-yards",
 				EventID:     "nfl-broncos-chargers",
 				Description: "Russell Wilson 205.5 Passing Yards",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "russell-wilson",
 					Name:     "Russell Wilson",
 					Number:   "3",
 					Position: "QB",
 					Team:     "DEN",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-russell-wilson-over-205-5-yards",
 						Description: "Over 205.5",
@@ -978,18 +977,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-steelers-raiders",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Pittsburgh Steelers @ Las Vegas Raiders",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-steelers-raiders-ml",
 				EventID:     "nfl-steelers-raiders",
 				Description: "Steelers vs Raiders Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-steelers-win",
 						Description: "PIT",
@@ -1006,11 +1005,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-steelers-raiders-spread",
 				EventID:     "nfl-steelers-raiders",
 				Description: "Steelers -2.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-steelers-minus-2-5",
 						Description: "Steelers -2.5",
@@ -1027,11 +1026,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-steelers-raiders-total",
 				EventID:     "nfl-steelers-raiders",
 				Description: "Total Points 44.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-44-5",
 						Description: "Over 44.5",
@@ -1048,17 +1047,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-tj-watt-sacks",
 				EventID:     "nfl-steelers-raiders",
 				Description: "T.J. Watt 1.5 Sacks",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "tj-watt",
 					Name:     "T.J. Watt",
 					Number:   "90",
 					Position: "LB",
 					Team:     "PIT",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-tj-watt-over-1-5-sacks",
 						Description: "Over 1.5",
@@ -1076,18 +1075,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-jaguars-titans",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Jacksonville Jaguars @ Tennessee Titans",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-jaguars-titans-ml",
 				EventID:     "nfl-jaguars-titans",
 				Description: "Jaguars vs Titans Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-jaguars-win",
 						Description: "JAX",
@@ -1104,11 +1103,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-jaguars-titans-spread",
 				EventID:     "nfl-jaguars-titans",
 				Description: "Jaguars -3.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-jaguars-minus-3-5",
 						Description: "Jaguars -3.5",
@@ -1125,11 +1124,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-jaguars-titans-total",
 				EventID:     "nfl-jaguars-titans",
 				Description: "Total Points 39.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-39-5",
 						Description: "Over 39.5",
@@ -1146,17 +1145,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-trevor-lawrence-pass-tds",
 				EventID:     "nfl-jaguars-titans",
 				Description: "Trevor Lawrence 2.0 Passing TDs",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "trevor-lawrence",
 					Name:     "Trevor Lawrence",
 					Number:   "16",
 					Position: "QB",
 					Team:     "JAX",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-trevor-lawrence-over-2-0-tds",
 						Description: "Over 2.0",
@@ -1174,18 +1173,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-panthers-bucs",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Carolina Panthers @ Tampa Bay Buccaneers",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-panthers-bucs-ml",
 				EventID:     "nfl-panthers-bucs",
 				Description: "Panthers vs Buccaneers Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-panthers-win",
 						Description: "CAR",
@@ -1202,11 +1201,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-panthers-bucs-spread",
 				EventID:     "nfl-panthers-bucs",
 				Description: "Panthers -4.0",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-panthers-minus-4-0",
 						Description: "Panthers -4.0",
@@ -1223,11 +1222,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-panthers-bucs-total",
 				EventID:     "nfl-panthers-bucs",
 				Description: "Total Points 47.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-47-5",
 						Description: "Over 47.5",
@@ -1244,17 +1243,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-baker-mayfield-pass-yards",
 				EventID:     "nfl-panthers-bucs",
 				Description: "Baker Mayfield 245.5 Passing Yards",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "baker-mayfield",
 					Name:     "Baker Mayfield",
 					Number:   "6",
 					Position: "QB",
 					Team:     "TB",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-baker-mayfield-over-245-5-yards",
 						Description: "Over 245.5",
@@ -1272,18 +1271,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-commanders-giants",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Washington Commanders @ New York Giants",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-commanders-giants-ml",
 				EventID:     "nfl-commanders-giants",
 				Description: "Commanders vs Giants Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-commanders-win",
 						Description: "WAS",
@@ -1300,11 +1299,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-commanders-giants-spread",
 				EventID:     "nfl-commanders-giants",
 				Description: "Commanders -2.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-commanders-minus-2-5",
 						Description: "Commanders -2.5",
@@ -1321,11 +1320,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-commanders-giants-total",
 				EventID:     "nfl-commanders-giants",
 				Description: "Total Points 41.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-41-5",
 						Description: "Over 41.5",
@@ -1342,17 +1341,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-sam-howell-pass-yards",
 				EventID:     "nfl-commanders-giants",
 				Description: "Sam Howell 185.5 Passing Yards",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "sam-howell",
 					Name:     "Sam Howell",
 					Number:   "14",
 					Position: "QB",
 					Team:     "WAS",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-sam-howell-over-185-5-yards",
 						Description: "Over 185.5",
@@ -1370,18 +1369,18 @@ var nflEvents = []market.Event{
 	{
 		ID:          "nfl-texans-colts",
 		Type:        "Game",
-		League:      market.LeagueNFL,
+		League:      models.LeagueNFL,
 		Description: "Houston Texans @ Indianapolis Colts",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-texans-colts-ml",
 				EventID:     "nfl-texans-colts",
 				Description: "Texans vs Colts Moneyline",
-				Status:      market.StatusOpen,
-				Type:        market.TypeMoney,
+				Status:      models.StatusOpen,
+				Type:        models.TypeMoney,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-texans-win",
 						Description: "HOU",
@@ -1398,11 +1397,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-texans-colts-spread",
 				EventID:     "nfl-texans-colts",
 				Description: "Texans -5.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeSpread,
+				Status:      models.StatusOpen,
+				Type:        models.TypeSpread,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-texans-minus-5-5",
 						Description: "Texans -5.5",
@@ -1419,11 +1418,11 @@ var nflEvents = []market.Event{
 				ID:          "nfl-texans-colts-total",
 				EventID:     "nfl-texans-colts",
 				Description: "Total Points 43.5",
-				Status:      market.StatusOpen,
-				Type:        market.TypeTotal,
+				Status:      models.StatusOpen,
+				Type:        models.TypeTotal,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-over-43-5",
 						Description: "Over 43.5",
@@ -1440,17 +1439,17 @@ var nflEvents = []market.Event{
 				ID:          "nfl-cj-stroud-pass-yards",
 				EventID:     "nfl-texans-colts",
 				Description: "C.J. Stroud 255.5 Passing Yards",
-				Status:      market.StatusOpen,
-				Type:        market.TypePlayer,
+				Status:      models.StatusOpen,
+				Type:        models.TypePlayer,
 				Volume:      1000 + rand.Float64()*999000,
-				Player: &market.Player{
+				Player: &models.Player{
 					ID:       "cj-stroud",
 					Name:     "C.J. Stroud",
 					Number:   "7",
 					Position: "QB",
 					Team:     "HOU",
 				},
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-cj-stroud-over-255-5-yards",
 						Description: "Over 255.5",
@@ -1467,19 +1466,19 @@ var nflEvents = []market.Event{
 	},
 	{
 		ID:          "nfl-super-bowl-future",
-		Type:        market.TypeFuture,
-		League:      market.LeagueNFL,
+		Type:        models.TypeFuture,
+		League:      models.LeagueNFL,
 		Description: "Super Bowl LIX Winner",
-		Markets: []market.Market{
+		Markets: []models.Market{
 			{
 				ID:          "nfl-super-bowl-winner",
 				EventID:     "nfl-super-bowl-future",
 				Description: "Super Bowl LIX Winner",
-				Status:      market.StatusOpen,
-				Type:        market.TypeFuture,
+				Status:      models.StatusOpen,
+				Type:        models.TypeFuture,
 				Volume:      1000 + rand.Float64()*999000,
 				Player:      nil,
-				Outcomes: []market.Outcome{
+				Outcomes: []models.Outcome{
 					{
 						ID:          "nfl-chiefs-win-sb",
 						Description: "Kansas City Chiefs",
