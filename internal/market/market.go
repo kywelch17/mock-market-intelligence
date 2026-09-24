@@ -5,32 +5,32 @@ type Type string
 
 // Statuses
 const (
-	StatusOpen Status = "Open"
-	StatusClosed Status = "Closed"
+	StatusOpen    Status = "Open"
+	StatusClosed  Status = "Closed"
 	StatusSettled Status = "Settled"
 )
 
 // Types
 const (
-	TypeGame Type = "Game"
-	TypeMoney Type = "Money"
+	TypeGame   Type = "Game"
+	TypeMoney  Type = "Money"
 	TypeSpread Type = "Spread"
-	TypeTotal Type = "Total"
+	TypeTotal  Type = "Total"
 	TypePlayer Type = "Player"
+	TypeFuture Type = "Future"
 )
 
 type Market struct {
-	ID			string
-	EventID		string
+	ID          string
+	EventID     string
 	Description string
-	League		string
 
-	Status		Status
-	Type 		Type
+	Status Status
+	Type   Type
 
-	Volume		float64
+	Volume float64
 
-	Player		*Player // Unless it's a player prop, this can be null
+	Player *Player // Unless it's a player prop, this can be null
 
-	Outcomes	[]Outcome
+	Outcomes []Outcome
 }

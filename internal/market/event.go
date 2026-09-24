@@ -9,10 +9,10 @@ const (
 )
 
 type Event struct {
-	ID			string
-	Type		string
-	League		string
-	Description	string
-	
-	Markets		[]Market
+	ID          string
+	Type        Type
+	League      string
+	Description string
+
+	Markets []Market
 }
